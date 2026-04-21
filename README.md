@@ -34,17 +34,17 @@ Demonstrar técnicas de monitoramento de banco de dados, identificação de garg
 
 scripts/
 
-├── 01\\\_top\\\_queries.sql
+├── 01\\\\\\\_top\\\\\\\_queries.sql
 
-├── 02\\\_index\\\_usage.sql
+├── 02\\\\\\\_index\\\\\\\_usage.sql
 
-├── 03\\\_wait\\\_stats.sql
+├── 03\\\\\\\_wait\\\\\\\_stats.sql
 
-├── 04\\\_blocking.sql
+├── 04\\\\\\\_blocking.sql
 
-├── 05\\\_database\\\_size.sql
+├── 05\\\\\\\_database\\\\\\\_size.sql
 
-└── 06\\\_active\\\_sessions.sql
+└── 06\\\\\\\_active\\\\\\\_sessions.sql
 
 ```
 
@@ -62,7 +62,7 @@ scripts/
 
 
 
-!\[Update](docs/imagens/update\_em\_transacao)
+!\[Update](docs/imagens/update\_em\_transacao.png)
 
 
 
@@ -104,7 +104,7 @@ scripts/
 
 \* O SQL Server gera bloqueio
 
-\* DMV `sys.dm\\\_exec\\\_requests` identifica o problema
+\* DMV `sys.dm\\\\\\\_exec\\\\\\\_requests` identifica o problema
 
 
 
@@ -240,7 +240,7 @@ This project demonstrates SQL Server monitoring and diagnostics using DMVs.
 
 
 
-!\[Update](docs/imagens/update\_em\_transacao)
+!\[Update](docs/imagens/update\_em\_transacao.png)
 
 
 
