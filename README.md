@@ -34,17 +34,17 @@ Demonstrar técnicas de monitoramento de banco de dados, identificação de garg
 
 scripts/
 
-├── 01\_top\_queries.sql
+├── 01\\\_top\\\_queries.sql
 
-├── 02\_index\_usage.sql
+├── 02\\\_index\\\_usage.sql
 
-├── 03\_wait\_stats.sql
+├── 03\\\_wait\\\_stats.sql
 
-├── 04\_blocking.sql
+├── 04\\\_blocking.sql
 
-├── 05\_database\_size.sql
+├── 05\\\_database\\\_size.sql
 
-└── 06\_active\_sessions.sql
+└── 06\\\_active\\\_sessions.sql
 
 ```
 
@@ -62,7 +62,7 @@ scripts/
 
 
 
-!\[Update](docs/images/update.png)
+!\[Update](docs/imagens/update\_em\_transacao)
 
 
 
@@ -74,7 +74,7 @@ scripts/
 
 
 
-!\[Gerando Bloqueio](docs/images/gerando\_bloqueio.png)
+!\[Gerando Bloqueio](docs/imagens/gerando\_bloqueio.png)
 
 
 
@@ -86,7 +86,7 @@ scripts/
 
 
 
-!\[Sessao Bloqueada](docs/images/sessao\_bloqueada.png)
+!\[Sessao Bloqueada](docs/imagens/sessao\_bloqueada.png)
 
 
 
@@ -104,7 +104,7 @@ scripts/
 
 \* O SQL Server gera bloqueio
 
-\* DMV `sys.dm\_exec\_requests` identifica o problema
+\* DMV `sys.dm\\\_exec\\\_requests` identifica o problema
 
 
 
@@ -120,7 +120,7 @@ scripts/
 
 
 
-!\[Queries Pesadas](docs/images/queries\_mais\_pesadas.png)
+!\[Queries Pesadas](docs/imagens/queries\_mais\_pesadas.png)
 
 
 
@@ -136,7 +136,7 @@ scripts/
 
 
 
-!\[Indices Pouco Usados](docs/images/indices\_pouco\_usados.png)
+!\[Indices Pouco Usados](docs/imagens/indices\_pouco\_usados.png)
 
 
 
@@ -152,7 +152,7 @@ scripts/
 
 
 
-!\[Wait Stats](docs/images/mais\_gargalos.png)
+!\[Wait Stats](docs/imagens/mais\_gargalos.png)
 
 
 
@@ -168,7 +168,7 @@ scripts/
 
 
 
-!\[Tamanho DB](docs/images/tamanho\_dos\_bancos.png)
+!\[Tamanho DB](docs/imagens/tamanho\_dos\_bancos.png)
 
 
 
@@ -184,7 +184,7 @@ scripts/
 
 
 
-!\[Sessoes Ativas](docs/images/sessoes\_ativas.png)
+!\[Sessoes Ativas](docs/imagens/sessoes\_ativas.png)
 
 
 
@@ -240,7 +240,7 @@ This project demonstrates SQL Server monitoring and diagnostics using DMVs.
 
 
 
-!\[Update](docs/images/update.png)
+!\[Update](docs/imagens/update\_em\_transacao)
 
 
 
@@ -252,7 +252,7 @@ This project demonstrates SQL Server monitoring and diagnostics using DMVs.
 
 
 
-!\[Blocking](docs/images/gerando\_bloqueio.png)
+!\[Blocking](docs/imagens/gerando\_bloqueio.png)
 
 
 
@@ -264,7 +264,7 @@ This project demonstrates SQL Server monitoring and diagnostics using DMVs.
 
 
 
-!\[Blocked Session](docs/images/sessao\_bloqueada.png)
+!\[Blocked Session](docs/imagens/sessao\_bloqueada.png)
 
 
 
@@ -298,7 +298,7 @@ This project demonstrates SQL Server monitoring and diagnostics using DMVs.
 
 
 
-!\[Top Queries](docs/images/queries\_mais\_pesadas.png)
+!\[Top Queries](docs/imagens/queries\_mais\_pesadas.png)
 
 
 
@@ -310,7 +310,7 @@ This project demonstrates SQL Server monitoring and diagnostics using DMVs.
 
 
 
-!\[Index Usage](docs/images/indices\_pouco\_usados.png)
+!\[Index Usage](docs/imagens/indices\_pouco\_usados.png)
 
 
 
@@ -322,7 +322,7 @@ This project demonstrates SQL Server monitoring and diagnostics using DMVs.
 
 
 
-!\[Wait Stats](docs/images/mais\_gargalos.png)
+!\[Wait Stats](docs/imagens/mais\_gargalos.png)
 
 
 
@@ -334,7 +334,7 @@ This project demonstrates SQL Server monitoring and diagnostics using DMVs.
 
 
 
-!\[Database Size](docs/images/tamanho\_dos\_bancos.png)
+!\[Database Size](docs/imagens/tamanho\_dos\_bancos.png)
 
 
 
@@ -346,7 +346,7 @@ This project demonstrates SQL Server monitoring and diagnostics using DMVs.
 
 
 
-!\[Active Sessions](docs/images/sessoes\_ativas.png)
+!\[Active Sessions](docs/imagens/sessoes\_ativas.png)
 
 
 
@@ -365,6 +365,4 @@ This project demonstrates SQL Server monitoring and diagnostics using DMVs.
 \* Detecting blocking sessions
 
 \* Analyzing real-time activity
-
-
 
