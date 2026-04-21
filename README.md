@@ -1,368 +1,174 @@
-\# 🧠 SQL Server Monitoring \& Diagnostics
+SQL Server monitoring project: blocking simulation, DMVs analysis, wait stats, index usage and active sessions. Foco em diagnóstico e troubleshooting de performance.
 
+# 🧠 SQL Server Monitoring & Diagnostics
 
+Projeto focado em monitoramento e diagnóstico de performance no SQL Server utilizando DMVs.
 
-Projeto focado em monitoramento e diagnóstico de performance no SQL Server utilizando DMVs (Dynamic Management Views).
+---
 
+# 🇧🇷 Versão em Português
 
+## 📌 Objetivo
 
-\---
+Demonstrar técnicas de monitoramento, identificação de gargalos e troubleshooting no SQL Server.
 
+---
 
-
-\# 🇧🇷 Versão em Português
-
-
-
-\## 📌 Objetivo
-
-
-
-Demonstrar técnicas de monitoramento de banco de dados, identificação de gargalos e análise de comportamento do SQL Server em tempo real.
-
-
-
-\---
-
-
-
-\## 📂 Estrutura
-
-
-
-```bash
+## 📂 Estrutura
 
 scripts/
+├── 01_top_queries.sql
+├── 02_index_usage.sql
+├── 03_wait_stats.sql
+├── 04_blocking.sql
+├── 05_database_size.sql
+└── 06_active_sessions.sql
 
-├── 01\\\\\\\_top\\\\\\\_queries.sql
+---
 
-├── 02\\\\\\\_index\\\\\\\_usage.sql
+# 🧪 Simulação de Blocking (Destaque)
 
-├── 03\\\\\\\_wait\\\\\\\_stats.sql
+## 🟥 Sessão 1 — Transação aberta
 
-├── 04\\\\\\\_blocking.sql
+![Update](docs/imagens/update_em_transacao.png)
 
-├── 05\\\\\\\_database\\\\\\\_size.sql
+---
 
-└── 06\\\\\\\_active\\\\\\\_sessions.sql
+## 🟨 Sessão 2 — Gerando bloqueio
 
-```
+![Gerando Bloqueio](docs/imagens/gerando_bloqueio.png)
 
+---
 
+## 🟢 Sessão bloqueada detectada
 
-\---
+![Sessao Bloqueada](docs/imagens/sessao_bloqueada.png)
 
+---
 
+## ⚠️ Análise
 
-\# 🧪 Simulação de Blocking (Destaque)
+* Transação aberta mantém lock ativo
+* Outra sessão tenta acessar o mesmo recurso
+* O SQL Server gera bloqueio
+* DMV sys.dm_exec_requests identifica o problema
 
+---
 
+# 📊 Monitoramento Geral
 
-\## 🟥 Sessão 1 — Transação aberta
+## 🥇 Queries mais pesadas
 
-
-
-!\[Update](docs/imagens/update\_em\_transacao.png)
-
-
-
-\---
-
-
-
-\## 🟨 Sessão 2 — Gerando bloqueio
-
-
-
-!\[Gerando Bloqueio](docs/imagens/gerando\_bloqueio.png)
-
-
-
-\---
-
-
-
-\## 🟢 Sessão bloqueada detectada
-
-
-
-!\[Sessao Bloqueada](docs/imagens/sessao\_bloqueada.png)
-
-
-
-\---
-
-
-
-\## ⚠️ Análise
-
-
-
-\* Transação aberta mantém lock ativo
-
-\* Outra sessão tenta acessar o mesmo recurso
-
-\* O SQL Server gera bloqueio
-
-\* DMV `sys.dm\\\\\\\_exec\\\\\\\_requests` identifica o problema
-
-
-
-\---
-
-
-
-\# 📊 Monitoramento Geral
-
-
-
-\## 🥇 Queries mais pesadas
-
-
-
-!\[Queries Pesadas](docs/imagens/queries\_mais\_pesadas.png)
-
-
+![Queries Pesadas](docs/imagens/queries_mais_pesadas.png)
 
 📌 Identifica queries com maior consumo de CPU e IO
 
+---
 
+## 🥈 Índices pouco utilizados
 
-\---
+![Indices](docs/imagens/indices_pouco_usados.png)
 
+📌 Identifica índices com baixo uso
 
+---
 
-\## 🥈 Índices pouco utilizados
+## 🥉 Gargalos (Wait Stats)
 
-
-
-!\[Indices Pouco Usados](docs/imagens/indices\_pouco\_usados.png)
-
-
-
-📌 Ajuda a identificar índices desnecessários
-
-
-
-\---
-
-
-
-\## 🥉 Principais gargalos (Wait Stats)
-
-
-
-!\[Wait Stats](docs/imagens/mais\_gargalos.png)
-
-
+![Wait Stats](docs/imagens/mais_gargalos.png)
 
 📌 Mostra onde o SQL Server está aguardando recursos
 
+---
 
+## 🧪 Tamanho dos bancos
 
-\---
+![Tamanho](docs/imagens/tamanho_dos_bancos.png)
 
+📌 Planejamento de capacidade
 
+---
 
-\## 🧪 Tamanho dos bancos
+## ⚡ Sessões ativas
 
+![Sessoes](docs/imagens/sessoes_ativas.png)
 
+📌 Monitoramento em tempo real
 
-!\[Tamanho DB](docs/imagens/tamanho\_dos\_bancos.png)
+---
 
+## 🧠 Aprendizados
 
+* Uso de DMVs para monitoramento
+* Identificação de gargalos
+* Diagnóstico de blocking
+* Análise de sessões e queries
 
-📌 Auxilia no planejamento de capacidade
+---
 
+# 🇺🇸 English Version
 
-
-\---
-
-
-
-\## ⚡ Sessões ativas
-
-
-
-!\[Sessoes Ativas](docs/imagens/sessoes\_ativas.png)
-
-
-
-📌 Monitoramento em tempo real de conexões
-
-
-
-\---
-
-
-
-\# 🧠 Aprendizados
-
-
-
-\* Uso de DMVs para monitoramento
-
-\* Identificação de queries críticas
-
-\* Análise de gargalos (wait stats)
-
-\* Diagnóstico de bloqueios (blocking)
-
-\* Monitoramento de sessões e recursos
-
-
-
-\---
-
-
-
-\# 🇺🇸 English Version
-
-
-
-\## 📌 Objective
-
-
+## 📌 Objective
 
 This project demonstrates SQL Server monitoring and diagnostics using DMVs.
 
+---
 
+# 🧪 Blocking Simulation
 
-\---
+## 🟥 Session 1 — Open transaction
 
+![Update](docs/imagens/update_em_transacao.png)
 
+---
 
-\# 🧪 Blocking Simulation (Highlight)
+## 🟨 Session 2 — Blocking scenario
 
+![Blocking](docs/imagens/gerando_bloqueio.png)
 
+---
 
-\## 🟥 Session 1 — Open transaction
+## 🟢 Block detected
 
+![Blocked](docs/imagens/sessao_bloqueada.png)
 
+---
 
-!\[Update](docs/imagens/update\_em\_transacao.png)
+# 📊 Monitoring
 
+## 🥇 Top Queries
 
+![Top Queries](docs/imagens/queries_mais_pesadas.png)
 
-\---
+---
 
+## 🥈 Index Usage
 
+![Indexes](docs/imagens/indices_pouco_usados.png)
 
-\## 🟨 Session 2 — Blocking scenario
+---
 
+## 🥉 Wait Stats
 
+![Wait Stats](docs/imagens/mais_gargalos.png)
 
-!\[Blocking](docs/imagens/gerando\_bloqueio.png)
+---
 
+## 🧪 Database Size
 
+![DB Size](docs/imagens/tamanho_dos_bancos.png)
 
-\---
+---
 
+## ⚡ Active Sessions
 
+![Sessions](docs/imagens/sessoes_ativas.png)
 
-\## 🟢 Block detected
+---
 
+## 🧠 Key Learnings
 
-
-!\[Blocked Session](docs/imagens/sessao\_bloqueada.png)
-
-
-
-\---
-
-
-
-\## ⚠️ Analysis
-
-
-
-\* Open transaction holds a lock
-
-\* Another session attempts access
-
-\* SQL Server generates blocking
-
-\* DMV identifies the issue
-
-
-
-\---
-
-
-
-\# 📊 Monitoring Overview
-
-
-
-\## 🥇 Top Queries
-
-
-
-!\[Top Queries](docs/imagens/queries\_mais\_pesadas.png)
-
-
-
-\---
-
-
-
-\## 🥈 Index Usage
-
-
-
-!\[Index Usage](docs/imagens/indices\_pouco\_usados.png)
-
-
-
-\---
-
-
-
-\## 🥉 Wait Stats
-
-
-
-!\[Wait Stats](docs/imagens/mais\_gargalos.png)
-
-
-
-\---
-
-
-
-\## 🧪 Database Size
-
-
-
-!\[Database Size](docs/imagens/tamanho\_dos\_bancos.png)
-
-
-
-\---
-
-
-
-\## ⚡ Active Sessions
-
-
-
-!\[Active Sessions](docs/imagens/sessoes\_ativas.png)
-
-
-
-\---
-
-
-
-\# 🧠 Key Learnings
-
-
-
-\* Monitoring SQL Server using DMVs
-
-\* Identifying performance bottlenecks
-
-\* Detecting blocking sessions
-
-\* Analyzing real-time activity
-
+* Monitoring SQL Server with DMVs
+* Identifying bottlenecks
+* Detecting blocking
+* Real-time diagnostics
